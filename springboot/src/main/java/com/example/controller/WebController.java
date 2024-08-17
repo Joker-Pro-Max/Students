@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.common.Result;
+import com.example.common.RoleEnum;
 import com.example.entity.Account;
 import com.example.service.AdminService;
 import com.example.service.StudentService;
@@ -15,7 +16,6 @@ import javax.annotation.Resource;
 public class WebController {
     @Resource
     private StudentService studentService;
-
 
 
     @Resource
@@ -34,8 +34,18 @@ public class WebController {
      */
     @PostMapping("/login")
     public Result login(@RequestBody Account account) {
-        Account dbAccount = adminService.login(account);
+        Account dbAccount;
+        if (RoleEnum.ADMIN.name().equals(account.getRole())) {
+            dbAccount = adminService.login(account);
+
+        } else if (RoleEnum.STUDENT.name().equals(account.getRole())) {
+            dbAccount = studentService.login(account);
+        } else {
+            return Result.error("角色错误");
+        }
+
         return Result.success(dbAccount);
+
     }
 
 
