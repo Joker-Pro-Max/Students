@@ -4,7 +4,7 @@ public class Account {
     private Integer id;
     private String username;
     private String password;
-    private Integer name;
+    private String name;
 
     public Integer getId() {
         return id;
@@ -14,11 +14,11 @@ public class Account {
         this.id = id;
     }
 
-    public Integer getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -1,10 +1,10 @@
 package com.example.entity;
 
-public class Student {
+public class Student extends Account {
     private Integer id;
     private String username;
     private String password;
-    private Integer name;
+    private String name;
     private Integer phone;
     private String email;
     private String sex;
@@ -52,11 +52,13 @@ public class Student {
         this.id = id;
     }
 
-    public Integer getName() {
+    @Override
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
+    @Override
+    public void setName(String name) {
         this.name = name;
     }
 

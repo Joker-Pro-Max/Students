@@ -2,7 +2,7 @@ package com.example.entity;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-public class Admin {
+public class Admin extends Account {
     private Integer id;
     private String username;
     private String name;
