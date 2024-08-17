@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.common.Result;
+import com.example.entity.Account;
 import com.example.entity.Admin;
 import com.example.service.AdminService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,9 +28,9 @@ public class WebController {
      * 默认请求接口
      */
     @PostMapping("/login")
-    public Result login(@RequestBody Admin admin) {
-        Admin dbadmin = adminService.login(admin);
-        return Result.success(dbadmin);
+    public Result login(@RequestBody Account account) {
+        Account dbAccount = adminService.login(account);
+        return Result.success(dbAccount);
     }
 
 

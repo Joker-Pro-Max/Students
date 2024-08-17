@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.entity.Admin;
+import com.example.entity.Account;
 import com.example.exception.CustomException;
 import com.example.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,18 +16,18 @@ public class AdminService {
     @Autowired
     private RestTemplateAutoConfiguration restTemplateAutoConfiguration;
 
-    public Admin login(Admin admin) {
-        Admin dbadmin = adminMapper.selectByUsername(admin.getUsername());
-        if (dbadmin == null) {
+    public Account login(Account account) {
+        Account dbAdmin = adminMapper.selectByUsername(account.getUsername());
+        if (dbAdmin == null) {
             //没有用户
             throw new CustomException("账户或密码错误");
         }
         //比较密码
-        if (!admin.getPassword().equals(dbadmin.getPassword())) {
+        if (!account.getPassword().equals(dbAdmin.getPassword())) {
             throw new CustomException("账户或密码错误");
         }
         // 登录成功
-        return dbadmin;
+        return dbAdmin;
 
     }
 
