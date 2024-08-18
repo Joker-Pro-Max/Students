@@ -5,20 +5,13 @@ public class Student extends Account {
     private String username;
     private String password;
     private String name;
-    private Integer phone;
+    private String phone;
     private String email;
     private String sex;
-    private Integer age;
+    private String age;
     private String birth;
     private String avatar;
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     public String getAvatar() {
         return avatar;
@@ -70,11 +63,19 @@ public class Student extends Account {
         this.password = password;
     }
 
-    public Integer getPhone() {
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
