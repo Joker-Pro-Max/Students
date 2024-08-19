@@ -1,6 +1,6 @@
 server:
   port: 9090
-
+ip: localhost
 # 数据库配置
 spring:
   datasource:
