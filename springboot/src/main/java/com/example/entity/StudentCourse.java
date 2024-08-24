@@ -7,6 +7,16 @@ public class StudentCourse {
     public String no;
     public Integer course_id;
 
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public String studentName;
+
     public Integer getId() {
         return id;
     }

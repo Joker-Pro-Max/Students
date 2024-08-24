@@ -32,12 +32,6 @@ public class StudentCourseService {
         List<StudentCourse> courseList = studentCourseMapper.selectAll(studentCourse);
         return PageInfo.of(courseList);
     }
-    public PageInfo<StudentCourse> selectStudentPage(Integer pageNum, Integer pageSize, StudentCourse studentCourse) {
-        PageHelper.startPage(pageNum, pageSize);
-        List<StudentCourse> courseList = studentCourseMapper.selectStudentCourse(studentCourse);
-        return PageInfo.of(courseList);
-    }
-
 
 
     public void deleteById(Integer id) {
