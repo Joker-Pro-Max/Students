@@ -14,8 +14,8 @@
             <if test="no != null">
                 and student_course.no like concat('%',#{no},'%')
             </if>
-            <if test="student_id != null">
-                and student_course.student_id=#{student_id}
+            <if test="courseId != null">
+                and student_course.student_id=#{studentId}
             </if>
             and student_course.del_state=1
         </where>

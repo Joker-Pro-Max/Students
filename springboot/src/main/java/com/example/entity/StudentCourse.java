@@ -3,9 +3,9 @@ package com.example.entity;
 public class StudentCourse {
     public Integer id;
     public String name;
-    public Integer student_id;
+    public Integer studentId;
     public String no;
-    public Integer course_id;
+    public Integer courseId;
 
     public String getStudentName() {
         return studentName;
@@ -43,19 +43,19 @@ public class StudentCourse {
     }
 
 
-    public Integer getStudent_id() {
-        return student_id;
+    public Integer getCourseId() {
+        return courseId;
     }
 
-    public void setStudent_id(Integer student_id) {
-        this.student_id = student_id;
+    public void setCourseId(Integer courseId) {
+        this.courseId = courseId;
     }
 
-    public Integer getCourse_id() {
-        return course_id;
+    public Integer getStudentId() {
+        return studentId;
     }
 
-    public void setCourse_id(Integer course_id) {
-        this.course_id = course_id;
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
     }
 }

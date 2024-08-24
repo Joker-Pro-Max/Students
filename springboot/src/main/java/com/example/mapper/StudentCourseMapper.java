@@ -8,10 +8,10 @@ import org.apache.ibatis.annotations.Update;
 import java.util.List;
 
 public interface StudentCourseMapper {
-    @Insert("insert into student_course (name,no,student_id,course_id) values(#{name},#{no},#{student_id},#{course_id})")
+    @Insert("insert into student_course (name,no,student_id,course_id) values(#{name},#{no},#{studentId},#{courseId})")
     void insert(StudentCourse studentCourse);
 
-    @Select("select * from student_course where del_state=1 and  student_id=#{student_id} and course_id=#{course_id}")
+    @Select("select * from student_course where del_state=1 and  student_id=#{studentId} and course_id=#{courseId}")
     StudentCourse selectByCondition(StudentCourse studentCourse);
 
 //    @Select("select * from student_course where del_state=1 and  name like concat('%',#{name},'%') " + "and no like concat('%',#{no},'%') " + "order by id desc ")
